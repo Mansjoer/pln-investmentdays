@@ -143,6 +143,7 @@
                             <option value="0" selected>No</option>
                             <option value="1">Yes</option>
                         </select>
+                        <div id="floatingInputHelp" class="form-text">If you want to register more than 2 participants, please contact <a href="mailto:investmentdays@pln.co.id"><u>investmentdays@pln.co.id</u></a></div>
                     </div>
                     <div class="{{ $hasAccompany == 0 ? 'd-none' : '' }}">
                         <div class="row">
