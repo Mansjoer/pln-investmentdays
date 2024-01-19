@@ -19,7 +19,7 @@
                     <div class="text-center mb-5">
                         <span><b>Thank you for your confirmation on PLN Investment Days.</b></span>
                         @if ($isJoin == 1)
-                            We will announce your spot for 1-1 Billateral Business Meeting on 17 February 2024
+                            We will announce your spot for 1-1 Billateral Business Meeting on 16 February 2024
                         @endif
                     </div>
                     <p class="text-center">
@@ -126,8 +126,8 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="defaultSelect" class="form-label">Will you be attending PLN Investment Days?</label>
-                        <select id="defaultSelect" class="form-select @error('isComing') is-invalid @enderror" wire:model.live="isComing">
+                        <label for="isComing" class="form-label">Will you be attending PLN Investment Days?</label>
+                        <select id="isComing" class="form-select @error('isComing') is-invalid @enderror" wire:model.live="isComing">
                             <option value="0" selected>No</option>
                             <option value="1">Yes</option>
                         </select>
@@ -138,8 +138,8 @@
                         @enderror
                     </div>
                     <div class="mb-3 {{ $isComing == 0 ? 'd-none' : '' }}">
-                        <label for="defaultSelect" class="form-label">This invitation is valid for 2 people, will you register your accompany?</label>
-                        <select id="defaultSelect" class="form-select" wire:model.live="hasAccompany">
+                        <label for="selectAccompany" class="form-label text-nowrap d-inline-flex position-relative me-3">This invitation is valid for 2 people, will you register your accompany? </label>
+                        <select id="selectAccompany" class="form-select" wire:model.live="hasAccompany">
                             <option value="0" selected>No</option>
                             <option value="1">Yes</option>
                         </select>
@@ -205,7 +205,7 @@
                         </div>
                         @if ($isMedia != 1)
                             <div class="mb-3">
-                                <label for="defaultSelect" class="form-label">The Plenary Session is limited for one person only. Please select the participant who will attend</label>
+                                <label for="defaultSelect" class="form-label">The Plenary Session is limited for one person only. Please select the participant who will attend </label>
                                 <select id="defaultSelect" class="form-select" wire:model.live="selectParticipant">
                                     <option value="1" selected>{{ $firstName }} {{ $lastName }}</option>
                                     @if ($hasAccompany == 1)
