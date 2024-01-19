@@ -25,7 +25,6 @@
                     <p class="text-center">
                         @if ($isComing == 1)
                             Your ticket has been sent to your email. Please check your inbox or spam/junk.
-                        @else
                         @endif
                     </p>
                 </div>
@@ -38,7 +37,6 @@
                     <span class="app-brand-logo demo">
                         <img src="https://i.imgur.com/FRLa22C.png" style="width: 150px">
                     </span>
-                    {{-- <span class="app-brand-text demo text-heading fw-bold">Materialize</span> --}}
                 </a>
             </div>
             <div class="card-body">
