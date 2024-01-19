@@ -99,9 +99,9 @@
 
                         <p style="font-size: 15px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #919293;">Here's your ticket. Please keep this ticket for re-registration.</p>
 
-                        <p style="font-size: 15px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #919293;">Click the button below or click <a target="_blank" style="text-decoration: underline; color: #000000;" href="{{ 'https://investment-day.pln.test/ticket/' . $code }}"><u>here</u></a> to get your ticket.</p>
+                        <p style="font-size: 15px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #919293;">Click the button below or click <a target="_blank" style="text-decoration: underline; color: #000000;" href="{{ 'https://pln-investmentdays.com//ticket/' . $code }}"><u>here</u></a> to get your ticket.</p>
 
-                        <a href="{{ 'https://investment-day.pln.test/ticket/' . $code }}" target="_blank" style="background-image: -webkit-linear-gradient(left,  #009EB7 0%,#045A71 100%); font-size: 15px; line-height: 22px; font-family: 'Helvetica', Arial, sans-serif; font-weight: normal; text-decoration: none; padding: 12px 15px; color: #ffffff; border-radius: 5px; display: inline-block; mso-padding-alt: 0;">
+                        <a href="{{ 'https://pln-investmentdays.com//ticket/' . $code }}" target="_blank" style="background-image: -webkit-linear-gradient(left,  #009EB7 0%,#045A71 100%); font-size: 15px; line-height: 22px; font-family: 'Helvetica', Arial, sans-serif; font-weight: normal; text-decoration: none; padding: 12px 15px; color: #ffffff; border-radius: 5px; display: inline-block; mso-padding-alt: 0;">
                             <span style="mso-text-raise: 15pt; color: #ffffff;">View Ticket</span>
                     </td>
                 </tr>
