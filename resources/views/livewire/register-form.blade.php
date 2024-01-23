@@ -1,5 +1,32 @@
 <div class="d-flex col-lg-8 align-items-center justify-content-center authentication-bg p-5">
-    @if (!$isSuccess)
+    @if ($isSuccess)
+        <div class="card col-lg-8 p-2">
+            <div class="app-brand justify-content-center ">
+                <a class="app-brand-link gap-2">
+                    <span class="app-brand-logo demo">
+                        <img src="https://i.imgur.com/FRLa22C.png" alt="" style="width: 150px">
+                    </span>
+                </a>
+            </div>
+            <div class="card-body">
+                <div class="mx-auto pt-0 pt-lg-0">
+                    <div class="text-center mb-2">
+                        <i class="mdi mdi-check-circle-outline mdi-48px text-success"></i>
+                    </div>
+                    <div class="text-center mt-0">
+                        <h4><b>REGISTRATION COMPLETE</b></h4>
+                    </div>
+                    <div class="text-center mb-5">
+                        <span><b>Thank you for registering on PLN Investment Days.</b></span>
+                        {{-- <p><b>You are almost done</b></p> --}}
+                    </div>
+                    <p class="text-center">
+                        Your ticket has been sent to your email. Please check your inbox or spam/junk.
+                    </p>
+                </div>
+            </div>
+        </div>
+    @else
         <div class="card col-lg-8 p-2">
             <div class="app-brand justify-content-center ">
                 <a class="app-brand-link gap-2">
@@ -72,33 +99,6 @@
                     <button class="btn btn-primary d-grid w-100 waves-effect waves-light" id="btnSubmit" wire:loading.attr="disabled"><span wire:loading.remove>REGISTER</span> <span class="spinner-border" role="status" aria-hidden="true" wire:loading></span></button>
                 </form>
 
-            </div>
-        </div>
-    @else
-        <div class="card col-lg-8 p-2">
-            <div class="app-brand justify-content-center ">
-                <a class="app-brand-link gap-2">
-                    <span class="app-brand-logo demo">
-                        <img src="https://i.imgur.com/FRLa22C.png" alt="" style="width: 150px">
-                    </span>
-                </a>
-            </div>
-            <div class="card-body">
-                <div class="mx-auto pt-0 pt-lg-0">
-                    <div class="text-center mb-2">
-                        <i class="mdi mdi-check-circle-outline mdi-48px text-success"></i>
-                    </div>
-                    <div class="text-center mt-0">
-                        <h4><b>REGISTRATION COMPLETE</b></h4>
-                    </div>
-                    <div class="text-center mb-5">
-                        <span><b>Thank you for registering on PLN Investment Days.</b></span>
-                        {{-- <p><b>You are almost done</b></p> --}}
-                    </div>
-                    <p class="text-center">
-                        Your ticket has been sent to your email. Please check your inbox or spam/junk.
-                    </p>
-                </div>
             </div>
         </div>
     @endif
