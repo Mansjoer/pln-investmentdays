@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('content')
-    <div class="d-flex col-lg-8 align-items-center justify-content-center authentication-bg p-5">
+    <div class="d-flex col-lg-8 align-items-center justify-content-center authentication-bg p-1">
         <div class="row">
             <div class="col-12 mb-3">
                 <div class="card invoice-preview-card">
@@ -23,11 +23,9 @@
                             </div>
                         </div>
                     </div>
-                    <hr class="my-0">
-                    <div class="d-flex align-items-center justify-content-center mt-3 mb-3">
+                    <div class="d-flex align-items-center justify-content-center mt-0 mb-0">
                         <img class="img-fluid" src="https://i.imgur.com/JyG8ej0.jpeg" alt="">
                     </div>
-                    <hr class="my-0">
                     <div class="card-body">
                         <h6>Ticket Information:</h6>
                         <div class="table-responsive text-nowrap">
@@ -53,14 +51,20 @@
                             </table>
                         </div>
                     </div>
-                    <hr class="my-0">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-12">
-                                <span class="fw-medium text-heading">Note:</span>
-                                <span>Note here</span>
+                    @if ($ticket->participant->reservation && $ticket->participant->reservation->isJoin == 1)
+                        <hr class="my-0">
+                        <div class="card-body">
+                            <h6>Notes:</h6>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p>We will announce your spot for 1-1 Bilateral Business Meeting on <b>16 February 2024</b></p>
+                                </div>
                             </div>
                         </div>
+                    @endif
+                    <hr class="my-0">
+                    <div class="card-body">
+                        <p>For more information, you can contact our email : <a href="mailto:investmentdays@pln.co.id"> investmentdays@pln.co.id </a> or whatsApp: <a href="https://api.whatsapp.com/send?phone=6285210068470">+62 852-1006-8470.</a></p>
                     </div>
                 </div>
             </div>

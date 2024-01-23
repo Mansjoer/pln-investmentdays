@@ -9,11 +9,12 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class SendTicket extends Mailable
+class SendTicketBilateral extends Mailable
 {
     use Queueable, SerializesModels;
 
     public $name, $code;
+
     /**
      * Create a new message instance.
      */
@@ -39,7 +40,7 @@ class SendTicket extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mail.sendTicket',
+            view: 'mail.sendTicketBilateral',
         );
     }
 

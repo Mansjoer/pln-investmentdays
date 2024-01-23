@@ -42,7 +42,7 @@ class RegisterForm extends Component
         $participantTicket->isPlenary = 0;
         $participantTicket->save();
 
-        Mail::to($participant->email)->send(new SendTicket($participant->firstName, $this->isJoin, $participantTicket->code));
+        // Mail::to($participant->email)->send(new SendTicket($participant->firstName, $this->isJoin, $participantTicket->code));
 
         $this->reset();
         $this->isSuccess = true;

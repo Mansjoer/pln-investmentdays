@@ -22,6 +22,9 @@
                     <p class="text-center">
                         Your ticket has been sent to your email. Please check your inbox or spam/junk.
                     </p>
+                    {{-- <p class="text-center">
+                        Your ticket has been sent to your email. Please check your inbox or spam/junk.
+                    </p> --}}
                     <br>
                     <p class="text-center">
                         For more information, please contact our
@@ -40,7 +43,6 @@
                     <span class="app-brand-logo demo">
                         <img src="https://i.imgur.com/FRLa22C.png" alt="" style="width: 150px">
                     </span>
-                    {{-- <span class="app-brand-text demo text-heading fw-bold">Materialize</span> --}}
                 </a>
             </div>
             <div class="card-body">

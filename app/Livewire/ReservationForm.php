@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Mail\SendTicket;
+use App\Mail\SendTicketBilateral;
 use App\Models\File;
 use App\Models\Topic;
 use App\Models\Ticket;
@@ -147,7 +148,7 @@ class ReservationForm extends Component
                 $participantTicket->isPlenary = 0;
                 $participantTicket->save();
 
-                Mail::to($participant->email)->send(new SendTicket($participant->firstName, $participant->email, $participantTicket->code));
+                Mail::to($participant->email)->send(new SendTicket($participant->firstName, $participantTicket->code));
             }
 
 
@@ -170,7 +171,7 @@ class ReservationForm extends Component
                 $participantTicket->isPlenary = 0;
                 $participantTicket->save();
 
-                Mail::to($accompany->email)->send(new SendTicket($accompany->firstName, $accompany->email, $participantTicket->code));
+                Mail::to($accompany->email)->send(new SendTicket($accompany->firstName, $participantTicket->code));
             };
         } else {
             if ($this->isJoin == 1) {
@@ -254,7 +255,11 @@ class ReservationForm extends Component
                 $participantTicket->isPlenary = 1;
                 $participantTicket->save();
 
-                Mail::to($participant->email)->send(new SendTicket($participant->firstName, $this->isJoin, $participantTicket->code));
+                if ($this->isJoin == 0) {
+                    Mail::to($participant->email)->send(new SendTicket($participant->firstName, $participantTicket->code));
+                } else {
+                    Mail::to($participant->email)->send(new SendTicketBilateral($participant->firstName, $participantTicket->code));
+                }
             }
 
 
@@ -282,7 +287,11 @@ class ReservationForm extends Component
                 $participantTicket->isPlenary = 1;
                 $participantTicket->save();
 
-                Mail::to($accompany->email)->send(new SendTicket($accompany->firstName, $this->isJoin, $participantTicket->code));
+                if ($this->isJoin == 0) {
+                    Mail::to($participant->email)->send(new SendTicket($participant->firstName, $participantTicket->code));
+                } else {
+                    Mail::to($participant->email)->send(new SendTicketBilateral($participant->firstName, $participantTicket->code));
+                }
             };
         }
 

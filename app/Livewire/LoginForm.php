@@ -6,10 +6,17 @@ use Livewire\Component;
 
 class LoginForm extends Component
 {
+    public $username, $password, $remember;
+
     public function submit()
     {
-        sleep(3);
-        dd('ea');
+        $this->validate([
+            'username' => 'required',
+            'password' => 'required'
+        ]);
+        session()->flash('invalidCredentials', 'mantap');
+
+        // dd('ea');
     }
 
     public function render()
