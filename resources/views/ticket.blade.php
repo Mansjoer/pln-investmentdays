@@ -67,7 +67,7 @@
                                     <tbody class="table-border-bottom-0">
                                         <tr class="text-center">
                                             <td class="text-success"><i class="mdi mdi-check-circle mdi-20px"></i></td>
-                                            <td class="text-danger"><i class="mdi mdi-close-circle mdi-20px"></i></td>
+                                            <td class="text-success"><i class="mdi mdi-check-circle mdi-20px"></i></td>
                                             <td class="text-danger"><i class="mdi mdi-close-circle mdi-20px"></i></td>
                                         </tr>
                                     </tbody>
