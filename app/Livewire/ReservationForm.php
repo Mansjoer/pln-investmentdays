@@ -85,7 +85,7 @@ class ReservationForm extends Component
                     'isJoin' => 'required',
                     'topic' => 'required',
                     'isPotential' => 'required',
-                    'projectFootprint' => 'required'
+                    'projectFootprint' => 'required',
                 ]);
             }
         }

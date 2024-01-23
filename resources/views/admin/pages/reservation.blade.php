@@ -1,7 +1,7 @@
 @extends('admin.master')
 
 @section('pageTitle')
-    Dashboard
+    Reservations
 @endsection
 
 @section('content')

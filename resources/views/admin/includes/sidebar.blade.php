@@ -25,14 +25,14 @@
                  <div>Dashboard</div>
              </a>
          </li>
-         <li class="menu-item">
-             <a href="#" class="menu-link">
+         <li class="menu-item {{ Request::is('admin/participant*') ? 'active' : '' }}">
+             <a href="{{ route('admin-participant') }}" class="menu-link">
                  <i class="menu-icon tf-icons mdi mdi-account-group-outline"></i>
                  <div>Manage Participants</div>
              </a>
          </li>
-         <li class="menu-item">
-             <a href="#" class="menu-link">
+         <li class="menu-item {{ Request::is('admin/reservation*') ? 'active' : '' }}">
+             <a href="{{ route('admin-reservation') }}" class="menu-link">
                  <i class="menu-icon tf-icons mdi mdi-card-account-details-star-outline"></i>
                  <div>Manage Reservations</div>
              </a>

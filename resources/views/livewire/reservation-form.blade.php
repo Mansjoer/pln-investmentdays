@@ -249,7 +249,7 @@
 
                     </div>
                     <div class="mb-3">
-                        <label for="defaultSelect" class="form-label">Are you interested to join 1-1 bilateral meeting session?</label>
+                        <label for="defaultSelect" class="form-label">Are you interested to join 1-1 bilateral business meetings?</label>
                         <select id="defaultSelect" class="form-select @error('isJoin') is-invalid @enderror" wire:model.live="isJoin">
                             <option value="0">No</option>
                             <option value="1">Yes</option>
@@ -330,7 +330,12 @@
                         </div>
                         <div class="mb-3">
                             <label for="formFileMultiple" class="form-label">Add supporting documents</label>
-                            <input class="form-control" type="file" id="formFileMultiple" wire:model="attachment" multiple="">
+                            <input class="form-control @error('attachment') is-invalid @enderror" type="file" id="formFileMultiple" wire:model="attachment" multiple="" wire:ignore.self>
+                            @error('attachment')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
                     </div>
                     <div class="row">
