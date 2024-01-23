@@ -2,7 +2,7 @@
 
  <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
      <div class="app-brand demo">
-         <a href="index.html" class="app-brand-link">
+         <a href="/admin" class="app-brand-link">
              <span class="app-brand-logo demo">
                  <img src="https://1.bp.blogspot.com/-XjhgtORKCCE/XmD03YvnoeI/AAAAAAAABrE/5iqWTF-Cnvsi-DsuehAspe49AbWHqRjCACLcBGAsYHQ/s1600/Logo%2Bpln.png" alt="" style="width: 42.5px">
              </span>

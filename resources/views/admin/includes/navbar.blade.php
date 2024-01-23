@@ -53,13 +53,17 @@
                                     </div>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <span class="fw-medium d-block">John Doe</span>
-                                    <small class="text-muted">Admin</small>
+                                    <span class="fw-medium d-block">{{ ucfirst(Auth::user()->username) }}</span>
+                                    @if (Auth::user()->isAdmin == 1)
+                                        <small class="text-muted">Admin</small>
+                                    @else
+                                        <small class="text-muted">Staff</small>
+                                    @endif
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
@@ -76,12 +80,12 @@
                                 <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
                             </span>
                         </a>
-                    </li>
+                    </li> --}}
                     <li>
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="javascript:void(0);">
+                        <a class="dropdown-item" href="{{ route('auth-logout') }}">
                             <i class="mdi mdi-power me-2"></i>
                             <span class="align-middle">Log Out</span>
                         </a>

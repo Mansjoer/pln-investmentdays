@@ -11,7 +11,7 @@
                 All Rights Reserved.
             </div>
             <div class="d-none d-lg-inline-block">
-                <a href="https://demos.pixinvent.com/materialize-html-admin-template/documentation/" target="_blank" class="footer-link me-4">Documentation</a>
+                <a href="/admin" target="_blank" class="footer-link me-4">Support</a>
             </div>
         </div>
     </div>
