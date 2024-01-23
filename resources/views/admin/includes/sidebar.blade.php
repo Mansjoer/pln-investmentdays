@@ -19,7 +19,6 @@
      <div class="menu-inner-shadow"></div>
 
      <ul class="menu-inner py-1">
-         <!-- Page -->
          <li class="menu-item {{ Request::is('admin') ? 'active' : '' }}">
              <a href="/admin" class="menu-link">
                  <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
@@ -27,9 +26,27 @@
              </a>
          </li>
          <li class="menu-item">
-             <a href="page-2.html" class="menu-link">
-                 <i class="menu-icon tf-icons mdi mdi-file-outline"></i>
-                 <div>Page 2</div>
+             <a href="#" class="menu-link">
+                 <i class="menu-icon tf-icons mdi mdi-account-group-outline"></i>
+                 <div>Manage Participants</div>
+             </a>
+         </li>
+         <li class="menu-item">
+             <a href="#" class="menu-link">
+                 <i class="menu-icon tf-icons mdi mdi-card-account-details-star-outline"></i>
+                 <div>Manage Reservations</div>
+             </a>
+         </li>
+         <li class="menu-header fw-medium mt-4">
+             <span class="menu-header-text">Billateral Meeting</span>
+         </li>
+         <li class="menu-header fw-medium mt-4">
+             <span class="menu-header-text">Administration</span>
+         </li>
+         <li class="menu-item">
+             <a href="#" class="menu-link">
+                 <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
+                 <div>Manage Users</div>
              </a>
          </li>
      </ul>

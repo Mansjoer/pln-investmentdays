@@ -21,6 +21,10 @@ Route::get('/', function () {
     return redirect()->route('app-register');
 });
 
+Route::get('/login', function () {
+    return view('auth.login');
+});
+
 Route::controller(TicketController::class)->group(function () {
     Route::get('/ticket/{code}', 'index')->name('app-ticket');
 });

@@ -286,7 +286,6 @@ class ReservationForm extends Component
             };
         }
 
-        $this->reset();
         $this->isSuccess = true;
         $this->currentStep = 1;
     }
