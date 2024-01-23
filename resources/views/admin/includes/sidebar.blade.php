@@ -40,15 +40,17 @@
          <li class="menu-header fw-medium mt-4">
              <span class="menu-header-text">Billateral Meeting</span>
          </li>
-         <li class="menu-header fw-medium mt-4">
-             <span class="menu-header-text">Administration</span>
-         </li>
-         <li class="menu-item">
-             <a href="#" class="menu-link">
-                 <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
-                 <div>Manage Users</div>
-             </a>
-         </li>
+         @if (Auth::user()->isAdmin == 1)
+             <li class="menu-header fw-medium mt-4">
+                 <span class="menu-header-text">Administration</span>
+             </li>
+             <li class="menu-item">
+                 <a href="#" class="menu-link">
+                     <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
+                     <div>Manage Users</div>
+                 </a>
+             </li>
+         @endif
      </ul>
  </aside>
  <!-- / Menu -->

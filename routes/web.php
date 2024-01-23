@@ -27,7 +27,7 @@ Route::get('/register', function () {
 
 Route::get('/login', function () {
     return view('auth.login');
-});
+})->name('auth-login')->middleware(['guest']);
 
 Route::controller(TicketController::class)->group(function () {
     Route::get('/ticket/{code}', 'index')->name('app-ticket');
