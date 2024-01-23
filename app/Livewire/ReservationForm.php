@@ -246,11 +246,12 @@ class ReservationForm extends Component
                 $participantTicket = new Ticket();
                 $participantTicket->code = Str::random(15);
                 $participantTicket->participant_id = $participant->id;
-                if ($this->selectParticipant == 1) {
-                    $participantTicket->isPlenary = 1;
-                } else {
-                    $participantTicket->isPlenary = 0;
-                }
+                // if ($this->selectParticipant == 1) {
+                //     $participantTicket->isPlenary = 1;
+                // } else {
+                //     $participantTicket->isPlenary = 0;
+                // }
+                $participantTicket->isPlenary = 1;
                 $participantTicket->save();
 
                 Mail::to($participant->email)->send(new SendTicket($participant->firstName, $participant->email, $participantTicket->code));
@@ -273,11 +274,12 @@ class ReservationForm extends Component
                 $participantTicket = new Ticket();
                 $participantTicket->code = Str::random(15);
                 $participantTicket->participant_id = $accompany->id;
-                if ($this->selectParticipant == 0) {
-                    $participantTicket->isPlenary = 1;
-                } else {
-                    $participantTicket->isPlenary = 0;
-                }
+                // if ($this->selectParticipant == 0) {
+                //     $participantTicket->isPlenary = 1;
+                // } else {
+                //     $participantTicket->isPlenary = 0;
+                // }
+                $participantTicket->isPlenary = 1;
                 $participantTicket->save();
 
                 Mail::to($accompany->email)->send(new SendTicket($accompany->firstName, $accompany->email, $participantTicket->code));

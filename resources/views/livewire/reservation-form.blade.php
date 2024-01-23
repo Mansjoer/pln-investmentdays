@@ -204,7 +204,7 @@
                                 </div>
                             @enderror
                         </div>
-                        @if ($isMedia != 1)
+                        {{-- @if ($isMedia != 1)
                             <div class="mb-3">
                                 <label for="defaultSelect" class="form-label">The Plenary Session is limited for one person only. Please select the participant who will attend </label>
                                 <select id="defaultSelect" class="form-select" wire:model.live="selectParticipant">
@@ -215,7 +215,7 @@
                                 </select>
                             </div>
                         @else
-                        @endif
+                        @endif --}}
                     </div>
                     <div class="row">
                         <div class="col-6">
