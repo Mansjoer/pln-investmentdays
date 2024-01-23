@@ -69,4 +69,22 @@
     ::-webkit-scrollbar-thumb {
         background: #FF0000;
     }
+
+    .btn-primary {
+
+        background-color: #00A2B9 !important;
+        border-color: #00A2B9 !important;
+    }
+
+    .btn-primary:hover {
+        background-color: #035B71 !important;
+        border-color: #035B71 !important;
+    }
+
+    .btn-primary:active,
+    .btn-primary:visited,
+    .btn-primary:focus {
+        background-color: #00A2B9 !important;
+        border-color: #00A2B9 !important;
+    }
 </style>
