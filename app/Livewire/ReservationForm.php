@@ -254,7 +254,7 @@ class ReservationForm extends Component
                 $participantTicket->isPlenary = 1;
                 $participantTicket->save();
 
-                Mail::to($participant->email)->send(new SendTicket($participant->firstName, $participant->email, $participantTicket->code));
+                Mail::to($participant->email)->send(new SendTicket($participant->firstName, $this->isJoin, $participantTicket->code));
             }
 
 
@@ -282,7 +282,7 @@ class ReservationForm extends Component
                 $participantTicket->isPlenary = 1;
                 $participantTicket->save();
 
-                Mail::to($accompany->email)->send(new SendTicket($accompany->firstName, $accompany->email, $participantTicket->code));
+                Mail::to($accompany->email)->send(new SendTicket($accompany->firstName, $this->isJoin, $participantTicket->code));
             };
         }
 

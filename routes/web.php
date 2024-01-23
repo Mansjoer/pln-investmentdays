@@ -21,6 +21,10 @@ Route::get('/', function () {
     return redirect()->route('app-register');
 });
 
+Route::get('/register', function () {
+    return redirect()->route('app-register');
+});
+
 Route::get('/login', function () {
     return view('auth.login');
 });
@@ -30,7 +34,7 @@ Route::controller(TicketController::class)->group(function () {
 });
 
 Route::controller(RegisterController::class)->group(function () {
-    Route::get('/register', 'register')->name('app-register');
+    Route::get('/registration', 'register')->name('app-register');
     Route::get('/register/verify/{token}', 'verify')->name('app-verify');
 });
 
@@ -41,5 +45,6 @@ Route::controller(ReservationController::class)->group(function () {
 Route::get('/email-template', function () {
     $name = 'nama';
     $code = '';
-    return view('mail.sendTicket', compact('name', 'code'));
+    $isJoin = 0;
+    return view('mail.sendTicket', compact('name', 'code', 'isJoin'));
 });

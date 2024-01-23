@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Mail;
 class RegisterForm extends Component
 {
     public $isSuccess = false;
+    public $isJoin = 0;
     public $firstName = '', $lastName = '', $email = '', $phone = '', $company = '', $jobTitle = '';
 
     public function submit()
@@ -41,7 +42,7 @@ class RegisterForm extends Component
         $participantTicket->isPlenary = 0;
         $participantTicket->save();
 
-        Mail::to($participant->email)->send(new SendTicket($participant->firstName, $participant->email, $participantTicket->code));
+        Mail::to($participant->email)->send(new SendTicket($participant->firstName, $this->isJoin, $participantTicket->code));
 
         $this->reset();
         $this->isSuccess = true;

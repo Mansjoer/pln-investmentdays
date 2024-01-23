@@ -96,6 +96,12 @@
                     <td style="width: 596px; vertical-align: top; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 40px;" width="596">
                         <h1 style="font-size: 20px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 600; text-decoration: none; color: #000000;">Greetings {{ $name }}!</h1>
                         <h1 style="font-size: 20px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 600; text-decoration: none; color: #000000;">Thank you for registering to PLN Investment Days</h1>
+                        @if ($isJoin == 1)
+                            <div>
+                                <p style="font-size: 15px; line-height: 10px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #919293;">We will announce your spot for 1-1 Bilateral Business Meeting on</p>
+                                <b style="padding-bottom: 150px; font-family: 'Helvetica', Arial, sans-serif;">16 February 2024</b>
+                            </div>
+                        @endif
 
                         <p style="font-size: 15px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #919293;">Here's your ticket. Please keep this ticket for re-registration.</p>
 
@@ -103,6 +109,10 @@
 
                         <a href="{{ 'https://pln-investmentdays.com/ticket/' . $code }}" target="_blank" style="background-image: -webkit-linear-gradient(left,  #009EB7 0%,#045A71 100%); font-size: 15px; line-height: 22px; font-family: 'Helvetica', Arial, sans-serif; font-weight: normal; text-decoration: none; padding: 12px 15px; color: #ffffff; border-radius: 5px; display: inline-block; mso-padding-alt: 0;">
                             <span style="mso-text-raise: 15pt; color: #ffffff;">View Ticket</span>
+                        </a>
+
+                        <p style="font-size: 15px; padding-top: 25px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #919293;">For more information you can contact our</p>
+                        <p style="font-size: 15px; line-height: 0px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #919293;"><span><b>email</b></span>: <a href="mailto:investmentdays@pln.co.id" style="text-decoration: underline; color: #000000;">investmentdays@pln.co.id</a> or <span><b>whatsApp</b></span>: <a href="https://api.whatsapp.com/send?phone=6285210068470" style="text-decoration: underline; color: #000000;" target="_blank">+62 852-1006-8470</a>.</p>
                     </td>
                 </tr>
             </tbody>

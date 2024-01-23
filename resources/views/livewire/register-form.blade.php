@@ -18,10 +18,17 @@
                     </div>
                     <div class="text-center mb-5">
                         <span><b>Thank you for registering on PLN Investment Days.</b></span>
-                        {{-- <p><b>You are almost done</b></p> --}}
                     </div>
                     <p class="text-center">
                         Your ticket has been sent to your email. Please check your inbox or spam/junk.
+                    </p>
+                    <br>
+                    <p class="text-center">
+                        For more information, please contact our
+                        <br>
+                        <b>Email :</b> <a href="mailto:investmentdays@pln.co.id">investmentdays@pln.co.id</a>
+                        <br>
+                        <b>Whatsapp :</b> <a href="https://api.whatsapp.com/send?phone=6285210068470" target="_blank">+62 852-1006-8470</a>
                     </p>
                 </div>
             </div>

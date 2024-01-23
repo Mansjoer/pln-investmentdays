@@ -17,15 +17,26 @@
                         <h4><b>RESERVATION COMPLETE</b></h4>
                     </div>
                     <div class="text-center mb-5">
-                        <span><b>Thank you for your confirmation on PLN Investment Days.</b></span>
+                        <span><b>Thank you for your confirmation on PLN Investment Days</b></span>
+                        <br>
                         @if ($isJoin == 1)
-                            We will announce your spot for 1-1 Billateral Business Meeting on 16 February 2024
+                            We will announce your spot for 1-1 Bilateral Business Meeting on
+                            <br>
+                            <b>16 February 2024</b>
                         @endif
                     </div>
                     <p class="text-center">
                         @if ($isComing == 1)
                             Your ticket has been sent to your email. Please check your inbox or spam/junk.
                         @endif
+                    </p>
+                    <br>
+                    <p class="text-center">
+                        For more information, please contact our
+                        <br>
+                        <b>Email :</b> <a href="mailto:investmentdays@pln.co.id">investmentdays@pln.co.id</a>
+                        <br>
+                        <b>Whatsapp :</b> <a href="https://api.whatsapp.com/send?phone=6285210068470" target="_blank">+62 852-1006-8470</a>
                     </p>
                 </div>
             </div>
