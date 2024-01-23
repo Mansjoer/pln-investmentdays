@@ -51,6 +51,30 @@
                             </table>
                         </div>
                     </div>
+                    <hr class="my-0">
+                    <div class="card-body">
+                        <h6>Zone Accessibility :</h6>
+                        <div class="text-center">
+                            <div class="table-responsive text-nowrap">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Exhibition</th>
+                                            <th>Plenary</th>
+                                            <th>Bilateral</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-border-bottom-0">
+                                        <tr class="text-center">
+                                            <td class="text-success"><i class="mdi mdi-check-circle mdi-20px"></i></td>
+                                            <td class="text-danger"><i class="mdi mdi-close-circle mdi-20px"></i></td>
+                                            <td class="text-danger"><i class="mdi mdi-close-circle mdi-20px"></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                     @if ($ticket->participant->reservation && $ticket->participant->reservation->isJoin == 1)
                         <hr class="my-0">
                         <div class="card-body">

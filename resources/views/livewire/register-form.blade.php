@@ -20,7 +20,8 @@
                         <span><b>Thank you for registering on PLN Investment Days.</b></span>
                     </div>
                     <p class="text-center">
-                        Your ticket has been sent to your email. Please check your inbox or spam/junk.
+                        We will review your registration and send ticket confirmation to your email.
+                        Please check your email regularly.
                     </p>
                     {{-- <p class="text-center">
                         Your ticket has been sent to your email. Please check your inbox or spam/junk.
