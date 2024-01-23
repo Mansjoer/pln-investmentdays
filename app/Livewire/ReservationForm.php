@@ -2,17 +2,18 @@
 
 namespace App\Livewire;
 
-use App\Mail\SendTicket;
-use App\Mail\SendTicketBilateral;
 use App\Models\File;
+use App\Models\Zone;
 use App\Models\Topic;
 use App\Models\Ticket;
 use Livewire\Component;
+use App\Mail\SendTicket;
 use App\Models\Participant;
 use App\Models\Reservation;
 use Illuminate\Support\Str;
 use Livewire\Attributes\Url;
 use Livewire\WithFileUploads;
+use App\Mail\SendTicketBilateral;
 use App\Models\HospitalityContact;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
@@ -148,6 +149,14 @@ class ReservationForm extends Component
                 $participantTicket->isPlenary = 0;
                 $participantTicket->save();
 
+                $zone = Zone::create([
+                    'ticket_id' => $participantTicket->id,
+                    'isExhibition' => 1,
+                    'isPlanery' => 0,
+                    'isBilateral' => 0,
+                    'isGala' => 0
+                ]);
+
                 Mail::to($participant->email)->send(new SendTicket($participant->firstName, $participantTicket->code));
             }
 
@@ -170,6 +179,14 @@ class ReservationForm extends Component
                 $participantTicket->participant_id = $accompany->id;
                 $participantTicket->isPlenary = 0;
                 $participantTicket->save();
+
+                $zone = Zone::create([
+                    'ticket_id' => $participantTicket->id,
+                    'isExhibition' => 1,
+                    'isPlanery' => 0,
+                    'isBilateral' => 0,
+                    'isGala' => 0
+                ]);
 
                 Mail::to($accompany->email)->send(new SendTicket($accompany->firstName, $participantTicket->code));
             };
@@ -255,6 +272,14 @@ class ReservationForm extends Component
                 $participantTicket->isPlenary = 1;
                 $participantTicket->save();
 
+                $zone = Zone::create([
+                    'ticket_id' => $participantTicket->id,
+                    'isExhibition' => 1,
+                    'isPlanery' => 0,
+                    'isBilateral' => 0,
+                    'isGala' => 0
+                ]);
+
                 if ($this->isJoin == 0) {
                     Mail::to($participant->email)->send(new SendTicket($participant->firstName, $participantTicket->code));
                 } else {
@@ -286,6 +311,14 @@ class ReservationForm extends Component
                 // }
                 $participantTicket->isPlenary = 1;
                 $participantTicket->save();
+
+                $zone = Zone::create([
+                    'ticket_id' => $participantTicket->id,
+                    'isExhibition' => 1,
+                    'isPlanery' => 0,
+                    'isBilateral' => 0,
+                    'isGala' => 0
+                ]);
 
                 if ($this->isJoin == 0) {
                     Mail::to($participant->email)->send(new SendTicket($participant->firstName, $participantTicket->code));

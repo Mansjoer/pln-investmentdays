@@ -47,6 +47,10 @@
                                         <td><b>Company</b></td>
                                         <td>{{ $ticket->participant->company }}</td>
                                     </tr>
+                                    <tr>
+                                        <td><b>Job Title</b></td>
+                                        <td>{{ $ticket->participant->jobTitle }}</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -67,7 +71,11 @@
                                     <tbody class="table-border-bottom-0">
                                         <tr class="text-center">
                                             <td class="text-success"><i class="mdi mdi-check-circle mdi-20px"></i></td>
-                                            <td class="text-success"><i class="mdi mdi-check-circle mdi-20px"></i></td>
+                                            @if ($ticket->participant->isMedia == 0 && $ticket->participant->reservation)
+                                                <td class="text-success"><i class="mdi mdi-check-circle mdi-20px"></i></td>
+                                            @else
+                                                <td class="text-danger"><i class="mdi mdi-close-circle mdi-20px"></i></td>
+                                            @endif
                                             <td class="text-danger"><i class="mdi mdi-close-circle mdi-20px"></i></td>
                                         </tr>
                                     </tbody>
