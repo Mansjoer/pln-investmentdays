@@ -71,7 +71,7 @@
                                     <tbody class="table-border-bottom-0">
                                         <tr class="text-center">
                                             <td class="text-success"><i class="mdi mdi-check-circle mdi-20px"></i></td>
-                                            @if ($ticket->zone->isPlanery == 1)
+                                            @if ($ticket->zone->isPlenary == 1)
                                                 <td class="text-success"><i class="mdi mdi-check-circle mdi-20px"></i></td>
                                             @else
                                                 <td class="text-danger"><i class="mdi mdi-close-circle mdi-20px"></i></td>

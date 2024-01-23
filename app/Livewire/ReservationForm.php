@@ -152,7 +152,7 @@ class ReservationForm extends Component
                 $zone = Zone::create([
                     'ticket_id' => $participantTicket->id,
                     'isExhibition' => 1,
-                    'isPlanery' => 0,
+                    'isPlenary' => 0,
                     'isBilateral' => 0,
                     'isGala' => 0
                 ]);
@@ -183,7 +183,7 @@ class ReservationForm extends Component
                 $zone = Zone::create([
                     'ticket_id' => $participantTicket->id,
                     'isExhibition' => 1,
-                    'isPlanery' => 0,
+                    'isPlenary' => 0,
                     'isBilateral' => 0,
                     'isGala' => 0
                 ]);
@@ -275,7 +275,7 @@ class ReservationForm extends Component
                 $zone = Zone::create([
                     'ticket_id' => $participantTicket->id,
                     'isExhibition' => 1,
-                    'isPlanery' => 1,
+                    'isPlenary' => 1,
                     'isBilateral' => 0,
                     'isGala' => 0
                 ]);
@@ -315,7 +315,7 @@ class ReservationForm extends Component
                 $zone = Zone::create([
                     'ticket_id' => $participantTicket->id,
                     'isExhibition' => 1,
-                    'isPlanery' => 1,
+                    'isPlenary' => 1,
                     'isBilateral' => 0,
                     'isGala' => 0
                 ]);
