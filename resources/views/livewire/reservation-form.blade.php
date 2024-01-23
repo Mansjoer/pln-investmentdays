@@ -9,7 +9,7 @@
                 </a>
             </div>
             <div class="card-body">
-                <div class="w-px-400 mx-auto pt-5 pt-lg-0">
+                <div class="mx-auto pt-0 pt-lg-0">
                     <div class="text-center mb-2">
                         <i class="mdi mdi-check-circle-outline mdi-48px text-success"></i>
                     </div>

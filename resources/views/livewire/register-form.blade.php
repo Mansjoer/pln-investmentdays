@@ -81,11 +81,10 @@
                     <span class="app-brand-logo demo">
                         <img src="https://i.imgur.com/FRLa22C.png" alt="" style="width: 150px">
                     </span>
-                    {{-- <span class="app-brand-text demo text-heading fw-bold">Materialize</span> --}}
                 </a>
             </div>
             <div class="card-body">
-                <div class="w-px-400 mx-auto pt-5 pt-lg-0">
+                <div class="mx-auto pt-0 pt-lg-0">
                     <div class="text-center mb-2">
                         <i class="mdi mdi-check-circle-outline mdi-48px text-success"></i>
                     </div>
@@ -93,11 +92,11 @@
                         <h4><b>REGISTRATION COMPLETE</b></h4>
                     </div>
                     <div class="text-center mb-5">
-                        <span><b>Thank you for registering on PLN Investment Day. </b></span>
-                        <p><b>You are almost done</b></p>
+                        <span><b>Thank you for registering on PLN Investment Days.</b></span>
+                        {{-- <p><b>You are almost done</b></p> --}}
                     </div>
                     <p class="text-center">
-                        You have just been sent an email to validate your precense, please follow the link inside to continue.
+                        Your ticket has been sent to your email. Please check your inbox or spam/junk.
                     </p>
                 </div>
             </div>
