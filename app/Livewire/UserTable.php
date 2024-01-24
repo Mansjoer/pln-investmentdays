@@ -23,9 +23,9 @@ class UserTable extends Component
             $isAdmin = 0;
         }
         $user = User::create([
-            'username' => $this->username,
+            'username' => ucfirst($this->username),
             'email' => $this->email,
-            'password' => $this->password,
+            'password' => bcrypt($this->password),
             'isAdmin' => $isAdmin
         ]);
         $this->reset();
@@ -43,9 +43,10 @@ class UserTable extends Component
         $search = '%' . $this->search . '%';
         if (strlen($this->search >= 2)) {
             $users = User::where('username', 'LIKE', $search)
+                ->orderBy('username')
                 ->get();
         } else {
-            $users = User::orderByDesc('created_at')->paginate($this->pagination);
+            $users = User::orderBy('username')->paginate($this->pagination);
         }
         return view('livewire.user-table', compact('users'));
     }

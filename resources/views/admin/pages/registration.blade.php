@@ -1,7 +1,7 @@
 @extends('admin.master')
 
-@section('title')
-    Dashboard
+@section('pageTitle')
+    Registrations
 @endsection
 
 @section('content')

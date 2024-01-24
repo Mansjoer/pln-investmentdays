@@ -26,7 +26,7 @@
              </a>
          </li>
          <li class="menu-item {{ Request::is('admin/registration*') ? 'active' : '' }}">
-             <a href="{{ route('admin-participant') }}" class="menu-link">
+             <a href="{{ route('admin-registration') }}" class="menu-link">
                  <i class="menu-icon tf-icons mdi mdi-qrcode-scan"></i>
                  <div>Registration</div>
              </a>
@@ -55,8 +55,8 @@
          <li class="menu-header fw-medium mt-4">
              <span class="menu-header-text">Billateral Meeting</span>
          </li>
-         <li class="menu-item {{ Request::is('admin/schedule*') ? 'active' : '' }}">
-             <a href="{{ route('admin-ticket') }}" class="menu-link">
+         <li class="menu-item {{ Request::is('admin/bilateral/schedule*') ? 'active' : '' }}">
+             <a href="{{ route('admin-bilateral-schedule') }}" class="menu-link">
                  <i class="menu-icon tf-icons mdi mdi-calendar-month-outline"></i>
                  <div>Manage Schedule</div>
              </a>

@@ -8,7 +8,3 @@
     @livewire('participant-widget')
     @livewire('participant-table')
 @endsection
-
-@section('cscript')
-    <script></script>
-@endsection

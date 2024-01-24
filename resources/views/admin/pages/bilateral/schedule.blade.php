@@ -1,7 +1,7 @@
 @extends('admin.master')
 
-@section('title')
-    Dashboard
+@section('pageTitle')
+    Bilateral Schedule
 @endsection
 
 @section('content')
