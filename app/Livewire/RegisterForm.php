@@ -36,11 +36,11 @@ class RegisterForm extends Component
             'token' => Str::random(15)
         ]);
 
-        $participantTicket = new Ticket();
-        $participantTicket->code = Str::random(15);
-        $participantTicket->participant_id = $participant->id;
-        $participantTicket->isPlenary = 0;
-        $participantTicket->save();
+        // $participantTicket = new Ticket();
+        // $participantTicket->code = Str::random(15);
+        // $participantTicket->participant_id = $participant->id;
+        // $participantTicket->isPlenary = 0;
+        // $participantTicket->save();
 
         // Mail::to($participant->email)->send(new SendTicket($participant->firstName, $this->isJoin, $participantTicket->code));
 

@@ -77,7 +77,7 @@
                     <td style="width: 596px; vertical-align: top; padding-left: 0; padding-right: 0; padding-top: 15px; padding-bottom: 15px;" width="596">
 
                         <!-- Your logo is here -->
-                        <img style="width: 150px; max-width: 180px; height: 70px; max-height: 85px; text-align: center; color: #ffffff;" alt="Logo" src="https://i.imgur.com/FRLa22C.png" align="center" width="100" height="50" alt="PLN Investment Days 2024 Logo">
+                        <img style="width: 150px; max-width: 180px; height: 70px; max-height: 85px; text-align: center; color: #ffffff;" src="https://i.imgur.com/FRLa22C.png" align="center" width="100" height="50" alt="PLN Investment Days 2024 Logo">
 
                     </td>
                 </tr>
@@ -86,7 +86,7 @@
         <!-- End container for logo -->
 
         <!-- Hero image -->
-        <img style="width: 600px; max-width: 600px; height: 175px; max-height: 350px; text-align: center;" alt="Hero image" src="https://i.imgur.com/JyG8ej0.jpeg" align="center" width="600" height="350" alt="PLN Investment Days 2024 Event Banner">
+        <img style="width: 600px; max-width: 600px; height: 175px; max-height: 350px; text-align: center;" src="https://i.imgur.com/JyG8ej0.jpeg" align="center" width="600" height="350" alt="PLN Investment Days 2024 Event Banner">
         <!-- Hero image -->
 
         <!-- Start single column section -->
@@ -119,7 +119,7 @@
                 <tr>
                     <td style="width: 596px; vertical-align: top; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 30px;" width="596">
 
-                        <img style="width: 150px; max-width: 180px; height: 70px; max-height: 85px; text-align: center; color: #ffffff;" alt="Logo" src="https://i.imgur.com/FRLa22C.png" align="center" width="180" height="85" alt="PLN Investment Days 2024 Logo">
+                        <img style="width: 150px; max-width: 180px; height: 70px; max-height: 85px; text-align: center; color: #ffffff;" src="https://i.imgur.com/FRLa22C.png" align="center" width="180" height="85" alt="PLN Investment Days 2024 Logo">
 
                         <p style="font-size: 13px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #ffffff;">
                             PT. PLN Persero

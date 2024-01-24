@@ -22,7 +22,6 @@ class ParticipantTable extends Component
 
     public function paginationView()
     {
-
         return 'vendor.livewire.bootstrap';
     }
 

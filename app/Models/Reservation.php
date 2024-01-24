@@ -30,4 +30,9 @@ class Reservation extends Model
     {
         return $this->hasMany(File::class);
     }
+
+    public function hospitality()
+    {
+        return $this->hasOne(HospitalityContact::class);
+    }
 }

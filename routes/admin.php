@@ -1,6 +1,7 @@
 <?php
 
-
+use App\Http\Controllers\Admin\ParticipantController;
+use App\Models\Participant;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth'])->group(function () {
@@ -13,9 +14,10 @@ Route::middleware(['auth'])->group(function () {
         return view('admin.pages.registration');
     })->name('admin-registration');
 
-    Route::get('/participant', function () {
-        return view('admin.pages.participant');
-    })->name('admin-participant');
+    Route::controller(ParticipantController::class)->group(function () {
+        Route::get('/participant', 'index')->name('admin-participant');
+        Route::get('/participant/{id}', 'details')->name('admin-participant-details');
+    });
 
     Route::get('/reservation', function () {
         return view('admin.pages.reservation');
