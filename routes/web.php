@@ -19,7 +19,7 @@ use App\Http\Controllers\ReservationController;
 */
 
 Route::get('/', function () {
-    return redirect()->route('app-register');
+    return redirect('https://staging.pln-investmentdays.com/');
 });
 
 Route::get('/register', function () {

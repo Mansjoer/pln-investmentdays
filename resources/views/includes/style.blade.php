@@ -67,7 +67,7 @@
 
     /* Optional: show position indicator in red */
     ::-webkit-scrollbar-thumb {
-        background: #FF0000;
+        background: #ffffff;
     }
 
     .btn-primary {

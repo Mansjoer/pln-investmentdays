@@ -16,4 +16,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/reservation', function () {
         return view('admin.pages.reservation');
     })->name('admin-reservation');
+
+    Route::get('/ticket', function () {
+        return view('admin.pages.ticket');
+    })->name('admin-ticket');
+
+    Route::get('/user', function () {
+        return view('admin.pages.user');
+    })->name('admin-user');
 });

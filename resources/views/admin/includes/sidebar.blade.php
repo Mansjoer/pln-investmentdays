@@ -25,6 +25,15 @@
                  <div>Dashboard</div>
              </a>
          </li>
+         <li class="menu-item {{ Request::is('admin/registration*') ? 'active' : '' }}">
+             <a href="{{ route('admin-participant') }}" class="menu-link">
+                 <i class="menu-icon tf-icons mdi mdi-qrcode-scan"></i>
+                 <div>Registration</div>
+             </a>
+         </li>
+         <li class="menu-header fw-medium mt-4">
+             <span class="menu-header-text">Participant & Reservation</span>
+         </li>
          <li class="menu-item {{ Request::is('admin/participant*') ? 'active' : '' }}">
              <a href="{{ route('admin-participant') }}" class="menu-link">
                  <i class="menu-icon tf-icons mdi mdi-account-group-outline"></i>
@@ -37,15 +46,27 @@
                  <div>Manage Reservations</div>
              </a>
          </li>
+         <li class="menu-item {{ Request::is('admin/ticket*') ? 'active' : '' }}">
+             <a href="{{ route('admin-ticket') }}" class="menu-link">
+                 <i class="menu-icon tf-icons mdi mdi-ticket-confirmation-outline"></i>
+                 <div>Manage Tickets</div>
+             </a>
+         </li>
          <li class="menu-header fw-medium mt-4">
              <span class="menu-header-text">Billateral Meeting</span>
+         </li>
+         <li class="menu-item {{ Request::is('admin/schedule*') ? 'active' : '' }}">
+             <a href="{{ route('admin-ticket') }}" class="menu-link">
+                 <i class="menu-icon tf-icons mdi mdi-calendar-month-outline"></i>
+                 <div>Manage Schedule</div>
+             </a>
          </li>
          @if (Auth::user()->isAdmin == 1)
              <li class="menu-header fw-medium mt-4">
                  <span class="menu-header-text">Administration</span>
              </li>
-             <li class="menu-item">
-                 <a href="#" class="menu-link">
+             <li class="menu-item {{ Request::is('admin/user*') ? 'active' : '' }}">
+                 <a href="{{ route('admin-user') }}" class="menu-link">
                      <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
                      <div>Manage Users</div>
                  </a>
