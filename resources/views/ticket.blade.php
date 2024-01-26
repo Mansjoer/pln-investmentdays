@@ -1,10 +1,17 @@
 @extends('master')
 
+@section('background')
+    <span></span>
+@endsection
+
 @section('content')
-    <div class="d-flex col-lg-8 align-items-center justify-content-center authentication-bg p-1">
-        <div class="row">
-            <div class="col-12 mb-3">
+    <div class="d-flex align-items-center justify-content-center authentication-bg p-1">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="col-lg-8 mb-3">
                 <div class="card invoice-preview-card">
+                    <div class="d-flex align-items-center justify-content-center mt-0 mb-0">
+                        <img class="img-fluid card-img-top" src="https://i.imgur.com/JyG8ej0.jpeg" alt="">
+                    </div>
                     <div class="card-body">
                         <div class="d-flex justify-content-between flex-xl-row flex-md-column flex-sm-row flex-column">
                             <div class="mb-xl-0 pb-3">
@@ -15,16 +22,14 @@
                                 </div>
                                 <h4 class="mb-0"><b>PLN Investment Days 2024</b></h4>
                                 <h6 class="text-muted mb-0"><b>27 - 29 February 2024</b></h6>
-                                <h6 class="text-muted"><b>Mulia Resort Nusa Dua, Bali, Indonesia</b></h6>
+                                <h6 class="text-muted mb-1"><b>Mulia Resort Nusa Dua, Bali, Indonesia</b></h6>
                             </div>
                             <div class="text-center">
                                 <span class="card-img-top">{!! QrCode::size(150)->generate($ticket->code) !!}</span>
-                                <p class=""><b>{{ $ticket->code }}</b></p>
+                                <p class="mb-0 mt-2"><b>{{ $ticket->code }}</b></p>
+                                <p class=""><b>{{ \Carbon\Carbon::parse($ticket->created_at)->format('d F Y') }}</b></p>
                             </div>
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center mt-0 mb-0">
-                        <img class="img-fluid" src="https://i.imgur.com/JyG8ej0.jpeg" alt="">
                     </div>
                     <div class="card-body">
                         <h6>Ticket Information:</h6>
@@ -60,7 +65,7 @@
                         <h6>Zone Accessibility :</h6>
                         <div class="text-center">
                             <div class="table-responsive text-nowrap">
-                                <table class="table">
+                                <table class="table table-borderless">
                                     <thead>
                                         <tr>
                                             <th>Exhibition</th>
@@ -104,10 +109,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 ">
+            <div class="col-lg-8 ">
                 <div class="card d-none d-lg-flex">
                     <div class="card-body">
-                        <button class="btn btn-outline-danger d-grid w-100 mb-3 waves-effect">Download</button>
+                        {{-- <button class="btn btn-outline-danger d-grid w-100 mb-3 waves-effect">Download</button> --}}
                         <button class="btn btn-outline-success d-grid w-100 mb-3 waves-effect" onclick="window.print()">
                             Print
                         </button>

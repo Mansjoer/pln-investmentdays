@@ -24,8 +24,12 @@
         <!-- /Logo -->
         <div class="authentication-inner row m-0">
             <!-- Left Text -->
-            <div class="d-none d-lg-flex col-lg-4 align-items-center justify-content-center bg-image" style="background:url('{{ asset('jeneponto.jpg') }}'); background-repeat:no-repeat; background-size:cover; background-position: center center;">
-            </div>
+            @hasSection('background')
+                @yield('background')
+            @else
+                <div class="d-none d-lg-flex col-lg-4 align-items-center justify-content-center bg-image" style="background:url('{{ asset('jeneponto.jpg') }}'); background-repeat:no-repeat; background-size:cover; background-position: center center;">
+                </div>
+            @endif
             <!-- /Left Text -->
 
             <!--  Multi Steps Registration -->
