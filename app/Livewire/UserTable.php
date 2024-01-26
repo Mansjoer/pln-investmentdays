@@ -17,6 +17,9 @@ class UserTable extends Component
 
     public function createUser()
     {
+        $this->validate([
+            'username' => 'required|unique:users,username'
+        ]);
         if ($this->isAdmin) {
             $isAdmin = 1;
         } else {
@@ -36,6 +39,12 @@ class UserTable extends Component
     {
         $user = User::find($id);
         $user->delete();
+    }
+
+    public function modalClose()
+    {
+        $this->reset();
+        $this->resetValidation();
     }
 
     public function render()

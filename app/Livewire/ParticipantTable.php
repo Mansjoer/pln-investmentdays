@@ -25,6 +25,23 @@ class ParticipantTable extends Component
         return 'vendor.livewire.bootstrap';
     }
 
+    public function delete($id)
+    {
+        $participant = Participant::find($id);
+        $participant->delete();
+        if ($participant->reservation) {
+            $participant->reservation->delete();
+            foreach ($participant->reservation->topic as $topic) {
+                $topic->delete();
+            }
+            $participant->reservation->hospitality->delete();
+        }
+        if ($participant->ticket) {
+            $participant->ticket->delete();
+            $participant->ticket->zone->delete();
+        }
+    }
+
     public function render()
     {
         $search = '%' . $this->search . '%';

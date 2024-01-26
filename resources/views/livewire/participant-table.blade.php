@@ -59,8 +59,8 @@
                                 <div class="dropdown">
                                     <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="javascript:void(0);"><i class="mdi mdi-pencil-outline me-1"></i> Edit</a>
-                                        <a class="dropdown-item" href="javascript:void(0);"><i class="mdi mdi-trash-can-outline me-1"></i> Delete</a>
+                                        <a class="dropdown-item"><i class="mdi mdi-pencil-outline me-1"></i> Edit</a>
+                                        <a class="dropdown-item" role="button" wire:click.self="delete({{ $participant->id }})"><i class="mdi mdi-trash-can-outline me-1"></i> Delete</a>
                                     </div>
                                 </div>
                             </div>

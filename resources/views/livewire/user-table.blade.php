@@ -79,12 +79,12 @@
             @endif
         </div>
     </div>
-    <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" wire:ignore.self>
+    <div class="modal fade" id="addUserModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" wire:ignore.self>
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="addUserModal">Add New user</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" wire:click.self="modalClose" aria-label="Close">
                     </button>
                 </div>
                 <div class="modal-body">
@@ -92,8 +92,13 @@
                         <form wire:submit.prevent="createUser" spellcheck="false" id="addUserForm">
                             <div class="col-12 mb-2">
                                 <div class="form-floating form-floating-outline">
-                                    <input type="text" id="username" class="form-control" placeholder="Username" wire:model="username">
+                                    <input type="text" id="username" class="form-control @error('username') is-invalid @enderror" placeholder="Username" wire:model="username">
                                     <label for="username">Username</label>
+                                    @error('username')
+                                        <div class="invalid-feedback">
+                                            {!! $message !!}
+                                        </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-12 mb-2">
@@ -116,7 +121,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" wire:click.self="modalClose">Close</button>
                     <button type="submit" class="btn btn-primary" form="addUserForm" wire:ignore.self>Save changes</button>
                 </div>
             </div>
