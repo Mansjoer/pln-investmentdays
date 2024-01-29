@@ -60,11 +60,12 @@
                             <td class="text-danger text-center"><i class="mdi mdi-close-circle mdi-20px"></i></td>
                         @endif
                         <td class="text-center">
-                            <div class="dropdown">
-                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="javascript:void(0);"><i class="mdi mdi-pencil-outline me-1"></i> Edit</a>
-                                    <a class="dropdown-item" href="javascript:void(0);"><i class="mdi mdi-trash-can-outline me-1"></i> Delete</a>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <a class="text-primary" role="button" href="{{ route('app-ticket', $ticket->code) }}"><i class="mdi mdi-eye-outline me-1"></i></a>
+                                </div>
+                                <div>
+                                    <a class="text-danger" role="button" wire:click.self="delete({{ $ticket->code }})"><i class="mdi mdi-trash-can-outline me-1"></i></a>
                                 </div>
                             </div>
                         </td>

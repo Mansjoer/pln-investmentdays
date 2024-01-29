@@ -52,7 +52,7 @@ class ParticipantTable extends Component
                 ->orderByDesc('created_at')
                 ->get();
         } else {
-            $participants = Participant::paginate($this->pagination);
+            $participants = Participant::where('reservation_id', 0)->paginate($this->pagination);
         }
 
         return view('livewire.participant-table', compact('participants'));

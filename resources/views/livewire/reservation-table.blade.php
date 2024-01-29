@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <h5 class="card-title">Participants List</h5>
+        <h5 class="card-title">Reservation List</h5>
         <div class="d-flex justify-content-between align-items-center row py-3 gap-3 gap-md-0">
             <div class="col-12 participant-search">
                 <div class="row">
@@ -14,7 +14,7 @@
                         </select>
                     </div>
                     <div class="col-4">
-                        <input type="text" class="form-control" placeholder="Search Participant" wire:model.live="search" spellcheck="false" />
+                        <input type="text" class="form-control" placeholder="Search Reservation" wire:model.live="search" spellcheck="false" />
                     </div>
                     <div class="col-4 export-excel">
                         <button type="button" class="btn btn-outline-primary waves-effect waves-light">
@@ -29,35 +29,38 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th style="width: 20%">Name</th>
-                    <th style="width: 25%">Email</th>
-                    <th style="width: 20%">Phone</th>
-                    <th style="width: 20%">Company</th>
-                    <th style="width: 15%">Job Title</th>
-                    <th class="text-center" style="width: 5%">Presence</th>
+                    <th style="width: 20%">Company Name</th>
+                    <th style="width: 20%" class="text-center">Number of guest</th>
+                    <th style="width: 5%" class="text-center">Interest to Bilateral</th>
+                    <th style="width: 5%" class="text-center">Approved</th>
                     <th class="text-center" style="width: 5%">Action</th>
                 </tr>
             </thead>
             <tbody class="table-border-bottom-0">
-                @forelse ($participants as $participant)
+                @forelse ($reservations as $reservation)
                     <tr>
-                        <td>{{ $participant->firstName }} {{ $participant->lastName }}</td>
-                        <td>{{ $participant->email }}</td>
-                        <td>{{ $participant->phone }}</td>
-                        <td>{{ Str::limit($participant->company, 10) }}</td>
-                        <td>{{ $participant->jobTitle }}</td>
-                        @if ($participant->isComing == 1)
-                            <td class="text-center"><span class="badge bg-label-success">Present</span></td>
+                        @php
+                            $company = $reservation->participant->last();
+                        @endphp
+                        <td>{{ $company->company }}</td>
+                        <td class="text-center">{{ $reservation->participant->count() }}</td>
+                        @if ($reservation->isJoin == 1)
+                            <td class="text-success text-center"><i class="mdi mdi-check-circle mdi-20px"></i></td>
                         @else
-                            <td class="text-center"><span class="badge bg-label-danger">Not Present</span></td>
+                            <td class="text-danger text-center"><i class="mdi mdi-close-circle mdi-20px"></i></td>
+                        @endif
+                        @if ($reservation->isApproved == 1)
+                            <td class="text-success text-center"><i class="mdi mdi-check-circle mdi-20px"></i></td>
+                        @else
+                            <td class="text-danger text-center"><i class="mdi mdi-close-circle mdi-20px"></i></td>
                         @endif
                         <td class="text-center">
                             <div class="d-flex justify-content-center">
                                 <div>
-                                    <a class="text-primary" role="button" href="{{ route('admin-participant-details', $participant->id) }}"><i class="mdi mdi-eye-outline me-1"></i></a>
+                                    <a class="text-primary" role="button" href="{{ route('admin-reservation-details', $reservation->id) }}"><i class="mdi mdi-eye-outline me-1"></i></a>
                                 </div>
                                 <div>
-                                    <a class="text-danger" role="button" wire:click.self="delete({{ $participant->id }})"><i class="mdi mdi-trash-can-outline me-1"></i></a>
+                                    <a class="text-danger" role="button" wire:click.self="delete({{ $reservation->id }})"><i class="mdi mdi-trash-can-outline me-1"></i></a>
                                 </div>
                             </div>
                         </td>
@@ -71,12 +74,12 @@
                 @endforelse
             </tbody>
         </table>
-        @if ($participants->count() >= 1)
+        {{-- @if ($participants->count() >= 1)
             <div class="d-flex justify-content-end mt-3 p-3">
                 @if (method_exists($participants, 'links'))
                     {{ $participants->links() }}
                 @endif
             </div>
-        @endif
+        @endif --}}
     </div>
 </div>

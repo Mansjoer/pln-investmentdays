@@ -88,3 +88,5 @@
         border-color: #00A2B9 !important;
     }
 </style>
+
+@yield('cstyle')
