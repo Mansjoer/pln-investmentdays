@@ -22,7 +22,7 @@
                                 </div>
                                 <h4 class="mb-0"><b>PLN Investment Days 2024</b></h4>
                                 <h6 class="text-muted mb-0"><b>27 - 29 February 2024</b></h6>
-                                <h6 class="text-muted mb-1"><b>Mulia Resort Nusa Dua, Bali, Indonesia</b></h6>
+                                <h6 class="text-muted mb-1"><b>The Mulia Resort & Villas, Nusa Dua – Bali</b></h6>
                             </div>
                             <div class="text-center">
                                 <span class="card-img-top">{!! QrCode::size(150)->generate($ticket->code) !!}</span>

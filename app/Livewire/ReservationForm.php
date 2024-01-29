@@ -169,7 +169,7 @@ class ReservationForm extends Component
                     'lastName' => $this->accompanyLastName,
                     'email' => $this->accompanyEmail,
                     'phone' => $this->accompanyPhone,
-                    'company' => $this->accompanyCompany,
+                    'company' => $this->company,
                     'jobTitle' => $this->accompanyJobTitle,
                     'isComing' => $this->isComing,
                 ]);
@@ -296,7 +296,7 @@ class ReservationForm extends Component
                     'lastName' => $this->accompanyLastName,
                     'email' => $this->accompanyEmail,
                     'phone' => $this->accompanyPhone,
-                    'company' => $this->accompanyCompany,
+                    'company' => $this->company,
                     'jobTitle' => $this->accompanyJobTitle,
                     'isComing' => $this->isComing,
                 ]);

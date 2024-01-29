@@ -33,7 +33,7 @@ class ReservationTable extends Component
                 $q->where('company', 'like', $search);
             })->get();
         } else {
-            $reservations = Reservation::with('participant')->paginate($this->pagination);
+            $reservations = Reservation::with('participant')->orderBy('isApproved')->paginate($this->pagination);
         }
         return view('livewire.reservation-table', compact('reservations'));
     }

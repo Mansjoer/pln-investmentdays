@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-6 mb-3">
+                        {{-- <div class="col-lg-6 mb-3">
                             <label for="defaultFormControlInput" class="form-label">Company</label>
                             <input type="text" class="form-control @error('company') is-invalid @enderror" placeholder="Enter your company" wire:model="company" />
                             @error('company')
@@ -87,8 +87,8 @@
                                     {{ $message }}
                                 </div>
                             @enderror
-                        </div>
-                        <div class="col-lg-6 mb-3">
+                        </div> --}}
+                        <div class="col-lg-12 mb-3">
                             <label for="defaultFormControlInput" class="form-label">Job Title</label>
                             <input type="text" class="form-control @error('jobTitle') is-invalid @enderror" placeholder="Enter your job title" wire:model="jobTitle" />
                             @error('jobTitle')
