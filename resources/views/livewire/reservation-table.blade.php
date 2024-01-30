@@ -31,6 +31,7 @@
                 <tr>
                     <th style="width: 20%">Company Name</th>
                     <th style="width: 20%" class="text-center">Number of guest</th>
+                    <th style="width: 20%" class="text-center">Reservation Type</th>
                     <th style="width: 5%" class="text-center">Interest to Bilateral</th>
                     <th style="width: 5%" class="text-center">Approved</th>
                     <th class="text-center" style="width: 5%">Action</th>
@@ -40,10 +41,15 @@
                 @forelse ($reservations as $reservation)
                     <tr>
                         @php
-                            $company = $reservation->participant->last();
+                            $participant = $reservation->participant->last();
                         @endphp
-                        <td>{{ $company->company }}</td>
+                        <td>{{ $participant->company }}</td>
                         <td class="text-center">{{ $reservation->participant->count() }}</td>
+                        @if ($participant->isMedia == 1)
+                            <td class="text-center"><span class="badge bg-label-secondary">Media</span></td>
+                        @else
+                            <td class="text-center"><span class="badge bg-label-primary">Participant</span></td>
+                        @endif
                         @if ($reservation->isJoin == 1)
                             <td class="text-success text-center"><i class="mdi mdi-check-circle mdi-20px"></i></td>
                         @else
