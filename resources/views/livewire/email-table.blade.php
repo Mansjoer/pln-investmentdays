@@ -23,8 +23,8 @@
                     <button type="button" class="btn btn-outline-primary waves-effect waves-light me-2" data-bs-toggle="modal" data-bs-target="#importModal">
                         <span class="tf-icons mdi mdi-microsoft-excel me-2"></span>Import
                     </button>
-                    <button type="button" class="btn btn-outline-success waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#addUserModal">
-                        <span class="tf-icons mdi mdi-rocket-outline me-2"></span>Blast Email
+                    <button type="button" class="btn btn-outline-success waves-effect waves-light" wire:click="blastEmail">
+                        <span class="tf-icons mdi mdi-rocket-outline me-2" wire:loading.attr="disabled"></span>Blast Email
                     </button>
                 </div>
             </div>
