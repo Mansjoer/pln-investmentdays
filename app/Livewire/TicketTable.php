@@ -20,7 +20,6 @@ class TicketTable extends Component
         $search = '%' . $this->search . '%';
         if (strlen($this->search >= 2)) {
             $tickets = Ticket::whereHas('participant', function ($q) {
-                $search = '%' . $this->search . '%';
                 $q->where('firstName', 'LIKE', $search);
             })
                 ->orWhere('code', 'LIKE', $search)

@@ -5,7 +5,7 @@
             <div class="col-12 participant-search">
                 <div class="row">
                     <div class="col-1">
-                        <select id="FilterTransaction" class="form-select text-capitalize" wire:model.live="pagination">
+                        <select id="FilterTransaction" class="form-select text-capitalize" wire:change="resetPage" wire:model.live="pagination">
                             <option value="5"> 5 </option>
                             <option value="10"> 10 </option>
                             <option value="15"> 15 </option>
@@ -39,10 +39,10 @@
             </thead>
             <tbody class="table-border-bottom-0">
                 @forelse ($reservations as $reservation)
+                    @php
+                        $participant = $reservation->participant->last();
+                    @endphp
                     <tr>
-                        @php
-                            $participant = $reservation->participant->last();
-                        @endphp
                         <td>{{ $participant->company }}</td>
                         <td class="text-center">{{ $reservation->participant->count() }}</td>
                         @if ($participant->isMedia == 1)

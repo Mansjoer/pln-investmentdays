@@ -91,7 +91,7 @@
             <div class="card">
                 <div class="card-body">
                     <button class="btn btn-outline-success d-grid w-100 waves-effect waves-light">
-                        <span class="d-flex align-items-center justify-content-center text-nowrap"><i class="mdi mdi-send-outline scaleX-n1-rtl me-1"></i>Send Ticket</span>
+                        <span class="d-flex align-items-center justify-content-center text-nowrap"><i class="mdi mdi-check me-1"></i>Allow Participant</span>
                     </button>
                 </div>
             </div>

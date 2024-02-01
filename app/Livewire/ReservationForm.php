@@ -52,7 +52,7 @@ class ReservationForm extends Component
                 'firstName' => 'required',
                 'lastName' => 'required',
                 'email' => 'required|email|unique:participants,email',
-                'phone' => 'required|unique:participants,phone',
+                'phone' => 'required',
                 'isComing' => 'required'
             ], [
                 'isComing.required' => 'Are you coming or not?'

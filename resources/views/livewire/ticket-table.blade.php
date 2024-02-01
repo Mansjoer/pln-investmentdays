@@ -5,12 +5,12 @@
             <div class="col-12 participant-search">
                 <div class="row">
                     <div class="col-1">
-                        <select id="FilterTransaction" class="form-select text-capitalize" wire:model.live="pagination">
-                            <option value="5"> 5 </option>
-                            <option value="10"> 10 </option>
-                            <option value="15"> 15 </option>
-                            <option value="20"> 20 </option>
-                            <option value="25"> 25 </option>
+                        <select id="FilterTransaction" class="form-select text-capitalize" wire:change="resetPage" wire:model.live="pagination">
+                            <option value="5">5</option>
+                            <option value="10">10 </option>
+                            <option value="15">15 </option>
+                            <option value="20">20 </option>
+                            <option value="25">25 </option>
                         </select>
                     </div>
                     <div class="col-4">

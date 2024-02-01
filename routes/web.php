@@ -49,8 +49,8 @@ Route::controller(ReservationController::class)->group(function () {
 });
 
 Route::get('/email-template', function () {
-    $name = 'nama';
-    $code = '';
-    $isJoin = 0;
-    return view('mail.sendTicket', compact('name', 'code', 'isJoin'));
+    $name = 'name here';
+    $position = 'position here';
+    $company = 'company here';
+    return view('mail.sendInvitation', compact('name', 'position', 'company'));
 });

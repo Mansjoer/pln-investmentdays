@@ -1,11 +1,11 @@
 <div class="card">
     <div class="card-header">
-        <h5 class="card-title">Participants List</h5>
+        <h5 class="card-title">Allowed Participants List</h5>
         <div class="d-flex justify-content-between align-items-center row py-3 gap-3 gap-md-0">
             <div class="col-12 participant-search">
                 <div class="row">
                     <div class="col-1">
-                        <select id="FilterTransaction" class="form-select text-capitalize" wire:model.live="pagination">
+                        <select id="FilterTransaction" class="form-select text-capitalize" wire:change="resetPage" wire:model.live="pagination">
                             <option value="5"> 5 </option>
                             <option value="10"> 10 </option>
                             <option value="15"> 15 </option>
@@ -41,11 +41,12 @@
             <tbody class="table-border-bottom-0">
                 @forelse ($participants as $participant)
                     <tr>
-                        <td>{{ $participant->firstName }} {{ $participant->lastName }}</td>
-                        <td>{{ $participant->email }}</td>
+                        {{-- <td>{{ $participant->firstName }} {{ $participant->lastName }}</td> --}}
+                        <td>{{ Str::limit($participant->firstName . ' ' . $participant->lastName, 15) }}</td>
+                        <td>{{ Str::limit($participant->email, 25) }}</td>
                         <td>{{ $participant->phone }}</td>
                         <td>{{ Str::limit($participant->company, 10) }}</td>
-                        <td>{{ $participant->jobTitle }}</td>
+                        <td>{{ Str::limit($participant->jobTitle, 15) }}</td>
                         @if ($participant->isComing == 1)
                             <td class="text-center"><span class="badge bg-label-success">Present</span></td>
                         @else

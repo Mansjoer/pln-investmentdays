@@ -15,7 +15,8 @@ class ReservationController extends Controller
 
     public function details($id)
     {
-        $reservation = Reservation::find($id);
+        $reservation = Reservation::where('id', $id)->with('participant')->first();
+        // dd($reservation->participant);
         return view('admin.pages.reservation.details', compact('reservation'));
     }
 }

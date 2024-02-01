@@ -22,6 +22,8 @@
 <script src="{{ asset('app/assets/vendor/libs/@form-validation/umd/bundle/popular.min.js') }}"></script>
 <script src="{{ asset('app/assets/vendor/libs/@form-validation/umd/plugin-bootstrap5/index.min.js') }}"></script>
 <script src="{{ asset('app/assets/vendor/libs/@form-validation/umd/plugin-auto-focus/index.min.js') }}"></script>
+<script src="{{ asset('app/assets/vendor/libs/apex-charts/apexcharts.js') }}"></script>
+<script src="{{ asset('app/assets/vendor/libs/flatpickr/flatpickr.js') }}"></script>
 
 <!-- Main JS -->
 <script src="{{ asset('app/assets/js/main.js') }}"></script>

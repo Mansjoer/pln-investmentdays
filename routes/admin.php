@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ParticipantController;
 use App\Http\Controllers\Admin\ReservationController;
 use App\Models\Participant;
@@ -7,9 +8,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth'])->group(function () {
 
-    Route::get('/', function () {
-        return view('admin.pages.dashboard');
-    })->name('admin-dashboard');
+    Route::controller(DashboardController::class)->group(function () {
+        Route::get('/', 'index')->name('admin.pages.dashboard');
+    });
 
     Route::get('/registration', function () {
         return view('admin.pages.registration');

@@ -62,31 +62,31 @@
                                 <tbody>
                                     <tr>
                                         <td><b>Name</b></td>
-                                        <td>{{ $reservation->participant->firstName }} {{ $reservation->participant->lastName }}</td>
+                                        <td>{{ $reservation->participant[0]->firstName }} {{ $reservation->participant[0]->firstName }}</td>
                                     </tr>
                                     <tr>
                                         <td><b>Email</b></td>
-                                        <td>{{ $reservation->participant->email }}</td>
+                                        <td>{{ $reservation->participant[0]->email }}</td>
                                     </tr>
                                     <tr>
                                         <td><b>Phone</b></td>
-                                        <td>{{ $reservation->participant->phone }}</td>
+                                        <td>{{ $reservation->participant[0]->phone }}</td>
                                     </tr>
                                     <tr>
                                         <td><b>Company</b></td>
-                                        <td>{{ $reservation->participant->company }}</td>
+                                        <td>{{ $reservation->participant[0]->company }}</td>
                                     </tr>
                                     <tr>
                                         <td><b>Job Title</b></td>
-                                        <td>{{ $reservation->participant->jobTitle }}</td>
+                                        <td>{{ $reservation->participant[0]->jobTitle }}</td>
                                     </tr>
                                     <tr>
                                         <td><b>Ticket</b></td>
-                                        <td>{{ $reservation->participant->jobTitle }}</td>
+                                        <td>{{ $reservation->participant[0]->jobTitle }}</td>
                                     </tr>
                                     <tr>
                                         <td><b>Precense</b></td>
-                                        @if ($reservation->participant->isComing == 1)
+                                        @if ($reservation->participant[0]->isComing == 1)
                                             <td><span class="badge bg-label-success">Present</span></td>
                                         @else
                                             <td><span class="badge bg-label-danger">Not Present</span></td>
@@ -158,8 +158,11 @@
         <div class="col-lg-3">
             <div class="card">
                 <div class="card-body">
-                    <button class="btn btn-outline-success d-grid w-100 waves-effect waves-light">
-                        <span class="d-flex align-items-center justify-content-center text-nowrap"><i class="mdi mdi-check scaleX-n1-rtl me-1"></i>Approve</span>
+                    <button class="btn btn-outline-success d-grid w-100 waves-effect waves-light mb-3">
+                        <span class="d-flex align-items-center justify-content-center text-nowrap"><i class="mdi mdi-check me-1"></i>Approve</span>
+                    </button>
+                    <button class="btn btn-outline-danger d-grid w-100 waves-effect waves-light ">
+                        <span class="d-flex align-items-center justify-content-center text-nowrap"><i class="mdi mdi-close me-1"></i>Disapprove</span>
                     </button>
                 </div>
             </div>

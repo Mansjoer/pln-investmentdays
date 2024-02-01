@@ -24,6 +24,8 @@
 <link rel="stylesheet" href="{{ asset('app/assets/vendor/libs/bootstrap-select/bootstrap-select.css') }}" />
 <link rel="stylesheet" href="{{ asset('app/assets/vendor/libs/select2/select2.css') }}" />
 <link rel="stylesheet" href="{{ asset('app/assets/vendor/libs/@form-validation/umd/styles/index.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('app/assets/vendor/libs/apex-charts/apex-charts.css') }}" />
+<link rel="stylesheet" href="{{ asset('app/assets/vendor/libs/flatpickr/flatpickr.css') }}" />
 
 <!-- Page CSS -->
 
