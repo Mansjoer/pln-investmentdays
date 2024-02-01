@@ -59,11 +59,11 @@ Route::get('/email-template', function () {
 });
 
 
-Route::get('/send-email', function () {
-    $name = 'name here';
-    $position = 'position here';
-    $company = 'company here';
-    $email = 'sumailaricky@gmail.com';
-    Mail::mailer('invitation')->to($email)->send(new SendInvitation($name, $email, $position, $company));
-    return 'Email send successfully';
-});
+// Route::get('/send-email', function () {
+//     $name = 'name here';
+//     $position = 'position here';
+//     $company = 'company here';
+//     $email = 'sumailaricky@gmail.com';
+//     Mail::mailer('invitation')->to($email)->send(new SendInvitation($name, $email, $position, $company));
+//     return 'Email send successfully';
+// });

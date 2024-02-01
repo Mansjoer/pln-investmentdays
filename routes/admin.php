@@ -43,5 +43,6 @@ Route::middleware(['auth'])->group(function () {
 
     Route::controller(EmailController::class)->group(function () {
         Route::get('/email-blasting', 'index')->name('admin-email-blasting');
+        Route::get('/send-email', 'blast')->name('app-blast-email');
     });
 });

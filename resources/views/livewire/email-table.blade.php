@@ -50,7 +50,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" wire:click.self="modalClose">Close</button>
-                    <button type="submit" class="btn btn-primary" form="addUserForm" wire:ignore.self>Import</button>
+                    <button type="submit" class="btn btn-primary" form="addUserForm" wire:ignore.self wire:loading.attr="disabled">Import</button>
                 </div>
             </div>
         </div>

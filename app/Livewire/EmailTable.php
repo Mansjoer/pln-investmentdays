@@ -16,9 +16,7 @@ class EmailTable extends Component
     public function importExcel()
     {
         $fileName = $this->file->getClientOriginalName();
-        $this->file->storePubliclyAs('excel/', $fileName, 'public');
-        $path = 'https://pln-investmentdays.com/storage/excel/' . $fileName;
-        Excel::import(new EmailImport, $path);
+        Excel::import(new EmailImport, $this->file->store('temp'));
         $this->dispatch('closeModal');
         $this->file = '';
         // dd($fileName);

@@ -8,24 +8,20 @@ use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Envelope;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Attachment;
 
 class SendInvitation extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $name, $email, $position, $company;
+    public $data;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($name, $email, $position, $company)
+    public function __construct($data)
     {
-        $this->name = $name;
-        $this->email = $email;
-        $this->position = $position;
-        $this->company = $company;
+        $this->data = $data;
     }
 
     /**

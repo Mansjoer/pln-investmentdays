@@ -81,9 +81,9 @@
             <tbody>
                 <tr>
                     <td style="width: 596px; vertical-align: top; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 0px;" width="596">
-                        <h1 style="font-size: 15px; line-height: 10px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 600; text-decoration: none; color: #000000;">Dear Mr./Mrs. {{ $name }}</h1>
-                        <h1 style="font-size: 15px; line-height: 10px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 600; text-decoration: none; color: #000000;">{{ ucwords($position) }}</h1>
-                        <h1 style="font-size: 15px; line-height: 10px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 600; text-decoration: none; color: #000000;">{{ ucwords($company) }}</h1>
+                        <h1 style="font-size: 15px; line-height: 10px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 600; text-decoration: none; color: #000000;">Dear Mr./Mrs. {{ $data['name'] }}</h1>
+                        <h1 style="font-size: 15px; line-height: 10px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 600; text-decoration: none; color: #000000;">{{ ucwords($data['position']) }}</h1>
+                        <h1 style="font-size: 15px; line-height: 10px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 600; text-decoration: none; color: #000000;">{{ ucwords($data['company']) }}</h1>
                     </td>
                 </tr>
                 <tr>
