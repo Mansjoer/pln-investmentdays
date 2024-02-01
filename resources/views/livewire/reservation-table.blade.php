@@ -32,6 +32,7 @@
                     <th style="width: 20%">Company Name</th>
                     <th style="width: 20%" class="text-center">Number of guest</th>
                     <th style="width: 20%" class="text-center">Reservation Type</th>
+                    <th style="width: 5%" class="text-center">Job Title</th>
                     <th style="width: 5%" class="text-center">Interest to Bilateral</th>
                     <th style="width: 5%" class="text-center">Approved</th>
                     <th class="text-center" style="width: 5%">Action</th>
@@ -50,6 +51,7 @@
                         @else
                             <td class="text-center"><span class="badge bg-label-primary">Participant</span></td>
                         @endif
+                        <td class="text-center"><span class="badge bg-label-warning">{{ $reservation->participant->first()->jobTitle }}</span></td>
                         @if ($reservation->isJoin == 1)
                             <td class="text-success text-center"><i class="mdi mdi-check-circle mdi-20px"></i></td>
                         @else

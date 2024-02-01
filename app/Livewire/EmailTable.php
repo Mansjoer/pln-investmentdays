@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Email;
 use Livewire\Component;
 use App\Imports\EmailImport;
 use Livewire\WithFileUploads;
@@ -19,7 +20,6 @@ class EmailTable extends Component
         Excel::import(new EmailImport, $this->file->store('temp'));
         $this->dispatch('closeModal');
         $this->file = '';
-        // dd($fileName);
     }
 
     public function modalClose()
@@ -30,6 +30,7 @@ class EmailTable extends Component
 
     public function render()
     {
-        return view('livewire.email-table');
+        $emails = Email::all();
+        return view('livewire.email-table', compact('emails'));
     }
 }
