@@ -122,7 +122,7 @@
                         <img style="width: 150px; max-width: 180px; height: 70px; max-height: 85px; text-align: center; color: #ffffff;" src="https://i.imgur.com/FRLa22C.png" align="center" width="180" height="85" alt="PLN Investment Days 2024 Logo">
 
                         <p style="font-size: 13px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #ffffff;">
-                            PT. PLN Persero
+                            PT. PLN (Persero)
                         </p>
 
                         <p style="margin-bottom: 0; font-size: 13px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #ffffff;">

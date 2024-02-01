@@ -1,10 +1,11 @@
 <?php
 
+use App\Models\Participant;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ParticipantController;
 use App\Http\Controllers\Admin\ReservationController;
-use App\Models\Participant;
-use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth'])->group(function () {
 
@@ -38,5 +39,9 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/schedule', function () {
             return view('admin.pages.bilateral.schedule');
         })->name('admin-bilateral-schedule');
+    });
+
+    Route::controller(EmailController::class)->group(function () {
+        Route::get('/email-blasting', 'index')->name('admin-email-blasting');
     });
 });

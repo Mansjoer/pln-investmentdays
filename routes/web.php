@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\EmailController;
 use App\Models\Reservation;
+use App\Mail\SendInvitation;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\RegisterController;
@@ -53,4 +56,14 @@ Route::get('/email-template', function () {
     $position = 'position here';
     $company = 'company here';
     return view('mail.sendInvitation', compact('name', 'position', 'company'));
+});
+
+
+Route::get('/send-email', function () {
+    $name = 'name here';
+    $position = 'position here';
+    $company = 'company here';
+    $email = 'sumailaricky@gmail.com';
+    Mail::mailer('invitation')->to($email)->send(new SendInvitation($name, $email, $position, $company));
+    return 'Email send successfully';
 });

@@ -72,7 +72,8 @@
 
 
         <!-- Hero image -->
-        <img style="width: 1000px; max-width: 1000px; height: 270px; max-height: 270px; text-align: center;" src="https://i.imgur.com/JyG8ej0.jpeg" align="center" width="600" height="350" alt="PLN Investment Days 2024 Event Banner">
+        <img style="width: 1000px; max-width: 1000px; height: 270px; max-height: 270px; text-align: center;" src="https://i.imgur.com/1K89n44.jpeg" align="center" width="600" height="350" alt="PLN Investment Days 2024 Event Banner">
+
         <!-- Hero image -->
 
         <!-- Start single column section -->
@@ -111,13 +112,16 @@
                             <b>The event will take place on:</b>
                         </p>
                         <p style="font-size: 15px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #000000;">
-                            <b>Day/Date</b> : <b>Tuesday – Thursday, February, 27th – 29th 2024</b>
+                            <b style="color: #000000;">Day/Date : Tuesday – Thursday, February, 27th – 29th 2024</b>
                             <br>
-                            <b>Day/Date</b> : <b>Mulia Resort Nusa Dua Bali</b>
+                            <b style="color: #000000;">Venue</b> ‎ ‎ ‎ ‎ ‎ : <b style="color: #000000;">Mulia Resort Nusa Dua Bali</b>
                             <br>
-                            <span style="padding-left: 76px">
-                                Jl. Raya Nusa Dua Selatan, Kawasan Sawangan, Benoa, Kecamatan Kuta Selatan, Kabupaten
-                                Badung, Bali, Indonesia 80362
+                            <span style="padding-left: 76px; text-wrap: wrap; color: #000000;">
+                                Jl. Raya Nusa Dua Selatan, Kawasan Sawangan, Benoa, Kecamatan Kuta Selatan
+                            </span>
+                            <br>
+                            <span style="padding-left: 76px; color: #000000;">
+                                Kabupaten Badung, Bali, Indonesia 80362
                             </span>
                         </p>
                     </td>
@@ -163,20 +167,6 @@
                 </tr>
             </tbody>
         </table>
-        <!-- End single column section -->
-        <!-- Start single column section -->
-        <table align="center" style="text-align: center; vertical-align: top; width: 1000px; max-width: 1000px; background-color: #ffffff;" width="600">
-            <tbody>
-                <tr>
-                    <td style="width: 596px; vertical-align: top; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 40px;" width="596">
-                        <p style="font-size: 15px; padding-top: 25px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #919293;">For more information you can contact our</p>
-                        <p style="font-size: 15px; line-height: 0px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #919293;"><span><b>email</b></span>: <a href="mailto:investmentdays@pln.co.id" style="text-decoration: underline; color: #000000;">investmentdays@pln.co.id</a> or <span><b>whatsApp</b></span>: <a href="https://api.whatsapp.com/send?phone=6285210068470" style="text-decoration: underline; color: #000000;" target="_blank">+62 852-1006-8470</a>.</p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <!-- End single column section -->
-
         <!-- Start footer -->
         <table align="center" style="text-align: center; vertical-align: top; width: 1000px; max-width: 1000px; background-image: -webkit-linear-gradient(left,  #009EB7 0%,#045A71 100%);" width="600">
             <tbody>
@@ -186,7 +176,7 @@
                         <img style="width: 150px; max-width: 180px; height: 70px; max-height: 85px; text-align: center; color: #ffffff;" src="https://i.imgur.com/FRLa22C.png" align="center" width="180" height="85" alt="PLN Investment Days 2024 Logo">
 
                         <p style="font-size: 13px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #ffffff;">
-                            PT. PLN Persero
+                            PT. PLN (Persero)
                         </p>
 
                         <p style="margin-bottom: 0; font-size: 13px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #ffffff;">

@@ -34,6 +34,12 @@
          <li class="menu-header fw-medium mt-4">
              <span class="menu-header-text">Participant & Reservation</span>
          </li>
+         <li class="menu-item {{ Request::is('admin/email-blasting*') ? 'active' : '' }}">
+             <a href="{{ route('admin-email-blasting') }}" class="menu-link">
+                 <i class="menu-icon tf-icons mdi mdi-email-outline"></i>
+                 <div>Email Blasting</div>
+             </a>
+         </li>
          <li class="menu-item {{ Request::is('admin/participant*') ? 'active' : '' }}">
              <a href="{{ route('admin-participant') }}" class="menu-link">
                  <i class="menu-icon tf-icons mdi mdi-account-group-outline"></i>
