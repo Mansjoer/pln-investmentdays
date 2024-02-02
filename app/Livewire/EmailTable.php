@@ -29,17 +29,22 @@ class EmailTable extends Component
         $emails = Email::all();
         $time = now()->addSeconds(5);
         foreach ($emails as $email) {
+            if ($email->name == null || $email->name == '') {
+                $dataEmail = '';
+            } else {
+                $dataEmail = $email->name;
+            }
             $data = [
-                'name' => $email->name,
+                'name' => $dataEmail,
                 'company' => $email->company,
                 'position' => $email->position,
                 'email' => $email->email,
                 'cc' => $email->cc
             ];
             if ($email->cc == null) {
-                $email = Mail::mailer('invitation')->to($email->email)->later($time, new SendInvitation($data));
+                Mail::mailer('invitation')->to($email->email)->later($time, new SendInvitation($data));
             } else {
-                $email = Mail::mailer('invitation')->to($email->email)->cc($email->cc)->later($time, new SendInvitation($data));
+                Mail::mailer('invitation')->to($email->email)->cc($email->cc)->later($time, new SendInvitation($data));
             }
         }
     }
