@@ -106,7 +106,7 @@
                             </div>
                         @enderror
                     </div>
-                    <button class="btn btn-primary d-grid w-100 waves-effect waves-light" id="btnSubmit" wire:loading.attr="disabled"><span wire:loading.remove>REGISTER</span> <span class="spinner-border" role="status" aria-hidden="true" wire:loading></span></button>
+                    <button class="btn btn-primary d-grid w-100 waves-effect waves-light" id="btnSubmit" wire:loading.attr="disabled" disabled><span wire:loading.remove>Registration Is Still Closed</span> <span class="spinner-border" role="status" aria-hidden="true" wire:loading></span></button>
                 </form>
 
             </div>

@@ -234,11 +234,11 @@
                         </div>
                         @if ($isComing != 0 && $isMedia != 1)
                             <div class="col-6">
-                                <button class="btn btn-primary d-grid w-100 waves-effect waves-light" id="btnSubmit" wire:click="firstStepSubmit" wire:loading.attr="disabled">Next</button>
+                                <button class="btn btn-primary d-grid w-100 waves-effect waves-light" id="btnSubmit" wire:click="firstStepSubmit" wire:loading.attr="disabled" disabled>Next</button>
                             </div>
                         @else
                             <div class="col-6">
-                                <button class="btn btn-primary d-grid w-100 waves-effect waves-light" id="btnSubmit" wire:click="firstStepSubmit" wire:loading.attr="disabled">Next</button>
+                                <button class="btn btn-primary d-grid w-100 waves-effect waves-light" id="btnSubmit" wire:click="firstStepSubmit" wire:loading.attr="disabled" disabled>Registration Is Still Closed</button>
                             </div>
                         @endif
                     </div>
